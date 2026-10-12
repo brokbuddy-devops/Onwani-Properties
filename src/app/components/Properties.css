@@ -1,0 +1,123 @@
+.properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.properties-title {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 12px;
+}
+
+.properties-subtitle {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.btn-view-all {
+  border: 1px solid var(--surface-border);
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.property-card {
+  background-color: var(--surface);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--surface-border);
+}
+
+.property-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+}
+
+.property-image-wrapper {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 8px 8px 0 8px;
+}
+
+.property-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1), filter 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  filter: blur(0px);
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.08);
+  filter: blur(4px); /* Approx 30% blur visually */
+}
+
+.property-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.property-card:hover .property-overlay {
+  opacity: 1;
+}
+
+.property-overlay .btn-light {
+  display: none; /* Hidden on desktop, custom cursor shows instead */
+}
+
+.property-info {
+  padding: 24px;
+}
+
+.property-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.property-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.property-price {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.property-specs {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .properties-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .property-overlay .btn-light {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,11 @@
+.all-properties-page {
+  min-height: 100vh;
+  padding-top: 112px;
+  background: var(--background);
+}
+
+@media (max-width: 768px) {
+  .all-properties-page {
+    padding-top: 88px;
+  }
+}

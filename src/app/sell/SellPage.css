@@ -1,0 +1,417 @@
+/* sell-page-wrapper */
+.sell-page-wrapper {
+  background: var(--background);
+  min-height: 100vh;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* 1. Hero Section */
+.sell-hero {
+  position: sticky;
+  top: 16px;
+  z-index: 0;
+  height: 95vh;
+  min-height: 600px;
+  width: calc(100% - 32px);
+  margin: 16px auto;
+  border-radius: 32px;
+  overflow: hidden;
+  background-image: url('/sell-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.sell-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.sell-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.sell-hero-content h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.sell-hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* 2. Commitment Section */
+.sell-commitment {
+  padding: 120px 5%;
+  text-align: center;
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  position: relative;
+}
+
+.section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 70px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.commitment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.commitment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.commitment-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 50%;
+  color: #000000;
+  transition: transform 0.4s ease;
+}
+
+.commitment-card:hover .commitment-icon {
+  transform: scale(1.1);
+  background: #000000;
+  color: #ffffff;
+}
+
+.commitment-icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.commitment-card h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.commitment-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* 3. Valuation Form Section */
+.sell-valuation {
+  position: relative;
+  padding: 100px 5%;
+  background-image: url('https://picsum.photos/seed/dubaisky/1920/1080'); /* Using generic dark cityscape if needed, or just solid */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.valuation-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(4, 21, 31, 0.85); /* Deep dark blue */
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.valuation-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.valuation-left h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.valuation-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.valuation-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.valuation-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.valuation-benefits svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-agent-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-agent-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* Form Card */
+.valuation-form-card {
+  background: #0b1a26;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.valuation-form-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.valuation-form-card p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.v-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.v-form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.v-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.v-form-group label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.v-form-group input, .v-form-group select {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 15px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.v-form-group input:focus, .v-form-group select:focus {
+  border-color: #10b981;
+}
+
+.v-form-group select option {
+  background: #0b1a26;
+  color: #fff;
+}
+
+.v-submit-btn {
+  margin-top: 10px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.v-submit-btn:hover {
+  background: #333333;
+}
+
+/* 4. Why Sell With Us */
+.sell-why-us {
+  padding: 100px 5%;
+  text-align: center;
+  background: var(--background);
+}
+
+.section-subtitle {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--foreground);
+}
+
+.why-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* 5. FAQs */
+.sell-faqs {
+  padding: 80px 5% 120px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-left h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 24px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--foreground);
+  cursor: pointer;
+  font-family: var(--font-geist-sans), sans-serif;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #000000;
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer {
+  padding-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .commitment-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .valuation-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sell-hero-content h1 {
+    font-size: 40px;
+  }
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+  .v-form-row {
+    flex-direction: column;
+  }
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .sell-faqs {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

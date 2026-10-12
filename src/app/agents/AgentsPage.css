@@ -1,0 +1,110 @@
+.agents-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: #faf9f6; /* Matching app background */
+}
+
+.agents-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.agents-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.agents-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+.agent-card-large {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  cursor: pointer;
+  height: 100%;
+}
+
+.agent-card-large:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.agent-card-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.agent-card-large:hover .agent-card-image {
+  transform: scale(1.03);
+}
+
+.agent-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.agent-card-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.agent-card-title {
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.agent-card-socials {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.agent-social-link {
+  color: #999;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-social-link:hover {
+  color: #000;
+  transform: translateY(-2px);
+}

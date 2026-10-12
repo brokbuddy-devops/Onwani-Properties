@@ -1,0 +1,535 @@
+/* AboutPage.css */
+
+.about-main {
+  background-color: var(--background);
+}
+
+.about-page-wrapper {
+  padding-bottom: 4rem;
+}
+
+/* Common */
+.text-center {
+  text-align: center;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+
+/* 1. HERO SECTION */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  line-height: 1.1;
+}
+
+.hero-left p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 400px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.badge-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-value {
+  font-size: 1.125rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. MISSION & VISION SECTION */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mv-card {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  overflow: hidden;
+}
+
+.mv-card.dark-card {
+  background: var(--foreground);
+  color: #fff;
+}
+
+.mv-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  font-weight: 800;
+  opacity: 0.05;
+}
+.dark-card .mv-number {
+  opacity: 0.1;
+  color: #fff;
+}
+
+.mv-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(216, 105, 39, 0.1);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.dark-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.mv-card h3 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.mv-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.dark-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 3. CORE VALUES */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  border-color: rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.value-number {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.value-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 4. STRATEGY & COMPLIANCE */
+.strategy-wrapper {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  border: 1px solid var(--surface-border);
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.strategy-content h2 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.strategy-content p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.strategy-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.check-icon {
+  color: var(--accent);
+  width: 20px;
+  height: 20px;
+}
+
+.strategy-image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 320px;
+}
+.strategy-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5. OUR APPROACH */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.approach-card {
+  background: var(--background);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+  transition: var(--transition);
+}
+
+.approach-card:hover {
+  border-color: var(--accent);
+}
+
+.approach-step {
+  display: block;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.approach-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.approach-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* 6. OUR SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--surface-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+
+.service-number {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.service-card h3 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
+/* 7. MARKET PRESENCE */
+.market-wrapper {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  border: 1px solid var(--surface-border);
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.market-content h2 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.market-content p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+.market-stat strong {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.market-stat span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.market-visual {
+  background: var(--foreground);
+  border-radius: var(--radius-md);
+  padding: 3rem;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe-icon {
+  width: 54px;
+  height: 54px;
+  color: var(--accent);
+  margin: 0 auto 1.5rem auto;
+}
+
+.market-globe-wrapper h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.market-globe-wrapper p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* 8. CTA BANNER */
+.cta-wrapper {
+  background: var(--foreground);
+  color: #fff;
+  padding: 5rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.cta-wrapper h2 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.cta-wrapper p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 1.1rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: opacity 0.3s;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 1.1rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: background 0.3s, border-color 0.3s;
+  font-size: 0.95rem;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-grid, .mv-grid, .strategy-grid, .market-grid {
+    grid-template-columns: 1fr;
+  }
+  .values-grid, .approach-grid, .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .strategy-image {
+    height: 250px;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .values-grid, .approach-grid, .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .strategy-checks {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

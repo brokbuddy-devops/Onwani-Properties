@@ -1,0 +1,151 @@
+.agent-details-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: #faf9f6;
+  padding-bottom: 5rem;
+}
+
+.agent-profile-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  padding: 3rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+@media (max-width: 900px) {
+  .agent-profile-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+.agent-profile-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.agent-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-profile-name {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.agent-profile-title {
+  color: #666;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.agent-profile-bio {
+  color: #444;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.agent-contact-info {
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.contact-icon {
+  color: #666;
+}
+
+.agent-contact-form {
+  background: #faf9f6;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: auto;
+  border: 1px solid #eee;
+}
+
+.agent-contact-form h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.btn-submit:hover {
+  opacity: 0.8;
+}
+
+/* Listings section */
+.agent-listings-section {
+  max-width: 1200px;
+  margin: 5rem auto 0;
+  padding: 0 2rem;
+}
+
+.agent-listings-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #000;
+  font-weight: 400;
+}

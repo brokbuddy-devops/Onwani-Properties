@@ -1,0 +1,53 @@
+.offplan-page-wrapper {
+  padding-top: 100px;
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.offplan-header {
+  position: relative;
+  padding: 25px 5%;
+  margin: 0 5% 30px 5%;
+  border-radius: 24px;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.offplan-title {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.offplan-subtitle {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.offplan-main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5% 100px;
+  gap: 30px;
+}

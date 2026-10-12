@@ -1,0 +1,171 @@
+/* The wrapper creates the scroll track height */
+.discover-wrapper {
+  height: 300vh;
+  position: relative;
+  background-color: var(--background);
+  z-index: 10;
+}
+
+/* The sticky container pins the content to the screen while scrolling through the 300vh track */
+.discover-sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+}
+
+.discover-title-part {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+.decorative-dot {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.floating-img {
+  position: absolute;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.floating-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-1 {
+  top: 15%;
+  left: 10%;
+  width: 260px;
+  height: 180px;
+}
+
+.img-2 {
+  top: 10%;
+  right: 10%;
+  width: 320px;
+  height: 200px;
+}
+
+.img-3 {
+  bottom: 15%;
+  left: 15%;
+  width: 320px;
+  height: 220px;
+}
+
+.img-4 {
+  bottom: 10%;
+  right: 15%;
+  width: 280px;
+  height: 240px;
+}
+
+.center-img {
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+}
+
+.discover-property-details {
+  position: absolute;
+  bottom: calc(7.5vh + 40px);
+  left: calc(2.5vw + 40px);
+  color: white;
+  text-align: left;
+  pointer-events: none;
+}
+
+.discover-property-title {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4), 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.discover-property-location {
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-weight: 500;
+  opacity: 0.95;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .img-1, .img-2, .img-3, .img-4 {
+    transform: scale(0.75);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .discover-wrapper {
+    height: 250vh;
+  }
+
+  .discover-title-part {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .img-1, .img-2, .img-3, .img-4 {
+    display: none;
+  }
+
+  .decorative-dot {
+    display: none;
+  }
+
+  /* Center image: the JS sets x: "-50%", y: "-50%" via framer-motion
+     which handles centering. Don't fight it with CSS margins. */
+  .center-img {
+    /* Let framer-motion width/height drive sizing, just reset any overrides */
+    border-radius: 12px;
+  }
+
+  .discover-property-details {
+    bottom: calc(10vh + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    max-width: 340px;
+  }
+
+  .discover-property-title {
+    font-size: clamp(22px, 6vw, 32px);
+    line-height: 1.15;
+  }
+
+  .discover-property-location {
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+}

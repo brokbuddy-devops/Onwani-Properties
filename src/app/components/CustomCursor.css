@@ -1,0 +1,58 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #000000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.3s ease,
+              border-radius 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-cursor.hover-property {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  mix-blend-mode: normal;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cursor-text {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards 0.1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hide default cursor when hovering over properties (so only the custom View Details bubble is visible) */
+.property-image-wrapper, 
+.property-image-wrapper *, 
+.center-img,
+.center-img * {
+  cursor: none !important;
+}
+
+/* Ensure no custom cursor on touch devices */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

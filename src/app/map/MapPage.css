@@ -1,0 +1,73 @@
+.map-page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background, #fff);
+  padding-top: 80px; /* Adjust for navbar height */
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  background: #e0e0e0;
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.1) brightness(0.9); /* Makes it look more like a map */
+}
+
+/* Floating overlay for the search bar */
+.map-search-overlay {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 10;
+  background: var(--background, #fff);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+}
+
+.map-pin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.map-pin:hover {
+  transform: translate(-50%, -100%) scale(1.1);
+  background: #333;
+}
+
+.map-pin svg {
+  fill: #fff;
+  stroke: #000;
+}
+
+/* Ensure the reused search bar fits nicely */
+.map-search-overlay .horizontal-search-bar {
+  margin: 0;
+  box-shadow: none; /* Overlay already has shadow */
+  background: transparent;
+  padding: 0;
+}
