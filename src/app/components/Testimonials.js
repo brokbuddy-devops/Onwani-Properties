@@ -1,14 +1,16 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import './Testimonials.css';
 
-const AnimatedCard = ({ review, row, col, scrollYProgress }) => {
+const AnimatedCard = ({ review, row, col, scrollYProgress, mobileOrder }) => {
   // Calculate stagger based on row and column index.
   // Each row starts 0.15 later. Within each row, each column pops up 0.05 later.
-  const start = 0.15 + (row * 0.15) + (col * 0.05);
-  const end = start + 0.08; // 0.08 duration for the pop animation
+  const start = mobileOrder === undefined
+    ? 0.15 + (row * 0.15) + (col * 0.05)
+    : 0.14 + mobileOrder * 0.105;
+  const end = start + (mobileOrder === undefined ? 0.08 : 0.06);
 
   // Opacity, scale, and y transforms to create a "pop upwards" effect
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
@@ -54,6 +56,7 @@ export default function Testimonials() {
   // All columns travel the exact same distance (250vh) so they don't drift apart.
   const sideColsY = useTransform(scrollYProgress, [0.15, 0.9], ["100vh", "-150vh"]);
   const centerColY = useTransform(scrollYProgress, [0.15, 0.9], ["calc(100vh - 80px)", "calc(-150vh - 80px)"]);
+  const mobileCardsY = useTransform(scrollYProgress, [0.1, 0.9], ["100vh", "-250vh"]);
 
   // Marquee appears much earlier, at the bottom of the section
   const marqueeY = useTransform(scrollYProgress, [0.7, 0.85], ["100%", "0%"]);
@@ -79,6 +82,7 @@ export default function Testimonials() {
       { name: "Mohammed Al H.", text: "Excellent service from start to finish. The team listened to my needs instead of just trying to sell.", role: "Property Buyer", theme: "dark" }
     ]
   ];
+  const mobileReviews = reviews.slice(0, 2).flat();
 
   return (
     <section className="testimonials-section" ref={containerRef} id="testimonials">
@@ -109,6 +113,19 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div className="mobile-testimonials-cards-container" style={{ y: mobileCardsY }}>
+          {mobileReviews.map((review, index) => (
+            <AnimatedCard
+              key={`${review.name}-${index}`}
+              review={review}
+              row={index}
+              col={0}
+              scrollYProgress={scrollYProgress}
+              mobileOrder={index}
+            />
+          ))}
+        </motion.div>
 
         {/* Marquee at the end */}
         <motion.div 
