@@ -90,6 +90,7 @@
   top: 50%;
   left: 50%;
   z-index: 5;
+  translate: -50% -50%;
 }
 
 .discover-property-details {
@@ -144,20 +145,17 @@
     display: none;
   }
 
-  /* Center image: the JS sets x: "-50%", y: "-50%" via framer-motion
-     which handles centering. Don't fight it with CSS margins. */
   .center-img {
-    /* Let framer-motion width/height drive sizing, just reset any overrides */
     border-radius: 12px;
   }
 
   .discover-property-details {
     bottom: calc(10vh + 20px);
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
+    right: 5%;
     text-align: center;
-    width: 90%;
-    max-width: 340px;
+    width: auto;
+    max-width: none;
   }
 
   .discover-property-title {

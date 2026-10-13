@@ -164,33 +164,62 @@
 }
 
 @media (max-width: 768px) {
-  .testimonials-cards-container {
-    grid-template-columns: 1fr;
-  }
   .testimonials-section {
     height: auto;
+    padding: 64px 0;
   }
+
   .testimonials-sticky {
     position: relative;
+    top: auto;
     height: auto;
+    min-height: 0;
     overflow: visible;
+    gap: 0;
   }
+
+  .testimonials-cards-container {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    padding: 0 6%;
+  }
+
   .testimonials-bg-text-container {
     position: relative;
     top: auto;
     left: auto;
-    transform: none;
-    font-size: 20vw;
-    margin-bottom: 40px;
+    height: auto;
+    font-size: clamp(48px, 16vw, 72px);
+    margin-bottom: 24px;
   }
+
   .testimonials-col {
+    display: contents;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .review-card {
+    width: 100%;
+    padding: 24px;
+    gap: 16px;
+    opacity: 1 !important;
     transform: none !important;
   }
+
   .marquee-container {
     position: relative;
+    left: auto;
     bottom: auto;
-    margin-top: 40px;
+    margin-top: 24px;
   }
+
   .company-outline-text {
     font-size: 15vw;
   }

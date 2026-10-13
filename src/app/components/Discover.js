@@ -35,7 +35,6 @@ export default function Discover() {
 
   // Stage 2.5: The 5th central image pops up while others are moving out
   const centerImageScale = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
-  const centerImageOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
   
   // Stage 3: The 5th central image expands smoothly — mobile-friendly values
   const centerImageWidth = useTransform(
@@ -96,12 +95,10 @@ export default function Discover() {
         <motion.div 
           className="floating-img center-img" 
           style={{ 
-            opacity: centerImageOpacity,
+            opacity: centerImageScale,
             scale: centerImageScale,
             width: centerImageWidth,
             height: centerImageHeight,
-            x: "-50%",
-            y: "-50%",
             zIndex: 5
           }}
         >
